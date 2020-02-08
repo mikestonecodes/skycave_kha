@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chrome Debugger",
+            "runtimeExecutable": "/usr/bin/chromium-snapshot-bin",
+            "runtimeArgs": [
+                "--allow-file-access-from-files"
+            ],
+            "url": "file://${workspaceFolder}/WorkerKha/build/html5/index.html",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "html5-worker"
+        },
+        {
+            "type": "electron",
+            "request": "launch",
+            "name": "Kha: HTML5",
+            "appDir": "${workspaceFolder}/build/debug-html5",
+            "cwd": "${workspaceFolder}/build/debug-html5",
+            "sourceMaps": true,
+            "preLaunchTask": "Kha: Build for Debug HTML5",
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "krom",
+            "request": "launch",
+            "name": "Kha: Krom",
+            "preLaunchTask": "Kha: Build for Krom",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ],
+    "compounds": []
+}

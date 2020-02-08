@@ -1,0 +1,1 @@
+painter-colored.frag
